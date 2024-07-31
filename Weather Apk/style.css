@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.body{
+    
+}
+
+.card{
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    height: 80vh;
+    width: 60vw;
+    border: 2px solid white;
+    margin: auto;
+    margin-top: 15vh;
+    border-radius: 30px;
+    
+}
+
+.search{
+    /* border: 2px solid; */
+    width: 40vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10vh;
+    border-radius: 30px;
+    overflow: hidden;
+    
+
+}
+
+.search img{
+    height: 5vh;
+}
+
+.search button{
+    border-radius: 120px;
+    overflow: hidden;
+    outline: 0
+}
+
+.search button:hover{
+    cursor: pointer;
+}
+
+.search input{
+    font-size: larger;
+    font-weight: 900;
+    display: flex;
+    width: 80%;  
+    border-radius: 50px;  
+    background: #ebfffc;
+    text-align: center;
+    font-size: 80px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* text-align: center; */
+    color: rgba(18, 18, 18, 0.978);
+
+}
+.search input::placeholder{
+    color: rgba(33, 218, 159, 0.527);;
+}
+
+.weather{
+    /* border: 2px solid; */
+    width: 50vw;
+    margin: auto;
+    /* display: flex; */
+    /* justify-content: center; */
+    margin-top: 5%;
+}
+
+.icon{
+    /* border: 2px solid; */
+    width: 40.9%;
+    border-radius: 40px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.weather h1{
+    font-size: 150px;
+    text-align: center;
+    color: beige;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.weather h2{
+    font-size: 100px;
+    text-align: center;
+    color: beige;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+
+
+
+
+
+
