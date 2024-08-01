@@ -46,7 +46,7 @@
             alt="humidity"
           />
 
-          <p class="humidity">22 Km/h</p>
+          <p class="wind">22 Km/h</p>
           <p>Wind Speed</p>
         </div>
       </div>
@@ -57,7 +57,17 @@
 <script>
 
 const apiKey = "e6f8e96a7ea86af7550dca9b9ae738ad";
-const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=newyork";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=delhi";
+
+async function checkWeather(){
+  const response = await fetch(apiUrl + `&appid=${apiKey}`);
+  var data = await response.json();
+  console.log(data);
+
+  document.querySelector(".city").innerHTML = data.name;
+}
+
+checkWeather();
 
 
 </script>
