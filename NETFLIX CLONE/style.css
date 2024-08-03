@@ -7,11 +7,11 @@
 }
 
 body{
-    background-color: black;
+    background-color: rgb(0, 0, 0);
 }
 
 .main {
-  background-image: url("./Assests/images/background_slide1.jpg");
+  background-image: url("./background_slide1.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: max(1200px, 100vw);
