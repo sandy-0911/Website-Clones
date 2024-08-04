@@ -10,12 +10,18 @@
     <div class="card">
       <div class="search">
         <input type="text" placeholder="Enter Location" />
+        <div class="live-location">
+          <button>
+            <img src="https://imgs.search.brave.com/ZPxNCPfGv7Dqt6ljTRc1925FTbOopDeGNsqLtfwR2qs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4y/LnZlY3RvcnN0b2Nr/LmNvbS9pLzEwMDB4/MTAwMC84Ny85Ni9i/bHVlLXRhcmdldC1p/Y29uLXZlY3Rvci0y/MzQ4Nzk2LmpwZw" alt="">
+          </button>
+        </div>
         <button>
           <img
             src="https://img.freepik.com/free-vector/illustration-magnifying-glass-icon_53876-5613.jpg?semt=ais_hybrid"
             alt=""
           />
         </button>
+        
       </div>
 
       <div class="weather">
@@ -75,21 +81,21 @@ async function checkWeather(city){
   document.querySelector(".wind").innerHTML = data.wind.speed + " Km/h";
 
 
-  if (data.weather[0].main == "Clouds"){
-      weatherIcon.src = "https://img.freepik.com/premium-vector/clouds-illustration-white-background_1174662-4303.jpg?ga=GA1.1.191704606.1722427562&semt=ais_hybrid";
-  }
-  else if (data.weather[0].main == "Clear"){
-      weatherIcon.src = "https://img.freepik.com/premium-vector/clouds-illustration-white-background_1174662-4303.jpg?ga=GA1.1.191704606.1722427562&semt=ais_hybrid";
-  }
-  else if (data.weather[0].main == "Rain"){
-      weatherIcon.src = "https://img.freepik.com/premium-vector/clouds-illustration-white-background_1174662-4303.jpg?ga=GA1.1.191704606.1722427562&semt=ais_hybrid";
-  }
-  else if (data.weather[0].main == "Drizzle"){
-      weatherIcon.src = "https://img.freepik.com/premium-vector/clouds-illustration-white-background_1174662-4303.jpg?ga=GA1.1.191704606.1722427562&semt=ais_hybrid";
-  }
-  else if (data.weather[0].main == "Mist"){
-      weatherIcon.src = "https://img.freepik.com/premium-vector/clouds-illustration-white-background_1174662-4303.jpg?ga=GA1.1.191704606.1722427562&semt=ais_hybrid";
-  }
+  // if (data.weather[0].main == "Clouds"){
+  //     weatherIcon.src = "https://img.freepik.com/premium-vector/clouds-illustration-white-background_1174662-4303.jpg?ga=GA1.1.191704606.1722427562&semt=ais_hybrid";
+  // }
+  // else if (data.weather[0].main == "Clear"){
+  //     weatherIcon.src = "https://img.freepik.com/premium-vector/clouds-illustration-white-background_1174662-4303.jpg?ga=GA1.1.191704606.1722427562&semt=ais_hybrid";
+  // }
+  // else if (data.weather[0].main == "Rain"){
+  //     weatherIcon.src = "https://img.freepik.com/premium-vector/clouds-illustration-white-background_1174662-4303.jpg?ga=GA1.1.191704606.1722427562&semt=ais_hybrid";
+  // }
+  // else if (data.weather[0].main == "Drizzle"){
+  //     weatherIcon.src = "https://img.freepik.com/premium-vector/clouds-illustration-white-background_1174662-4303.jpg?ga=GA1.1.191704606.1722427562&semt=ais_hybrid";
+  // }
+  // else if (data.weather[0].main == "Mist"){
+  //     weatherIcon.src = "https://img.freepik.com/premium-vector/clouds-illustration-white-background_1174662-4303.jpg?ga=GA1.1.191704606.1722427562&semt=ais_hybrid";
+  // }
 
 }
 
@@ -97,6 +103,20 @@ searchBtn.addEventListener('click', ()=>{
   checkWeather(searchBox.value);
 }
 )
+
+
+let location_btn = document.querySelector('.live-location');
+async function detectLiveLocation(){
+  const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+  var data = await response.json();
+}
+
+
+
+
+location_btn.addEventListener('click', ()=>{
+  detectLiveLocation(latitude, longitude);
+})
 
 
 

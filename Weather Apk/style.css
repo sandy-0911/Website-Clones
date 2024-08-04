@@ -13,6 +13,7 @@
     margin: auto;
     margin-top: 15vh;
     border-radius: 30px;
+    max-width: 50vw;
     
 }
 
@@ -28,6 +29,26 @@
     
 
 }
+
+.live-location{
+    /* border: 2px solid black; */
+    padding: 7px;
+}
+
+.live-location button{
+    height: 5vh;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    font-size: px;
+    padding: 3px;
+}
+
+.live-location button:hover{
+    cursor: crosshair;
+}
+
 
 .search img{
     height: 5vh;
@@ -117,6 +138,7 @@
     font-weight: 600;
     color: antiquewhite;
 }
+
 
 
 
